@@ -2,7 +2,7 @@ FROM fedora:30
 LABEL maintainer="Strongbrent"
 
 # Install Dependencies
-RUN dnf -y update && dnf clean all
+RUN dnf -y upgrade --refresh && dnf clean all
 
 RUN dnf makecache \
   && dnf -y install \
